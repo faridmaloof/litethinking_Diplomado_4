@@ -1,0 +1,18 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "url": "/api/pagos/aprobado"
+  },
+  "response": {
+    "status": 201,
+    "jsonBody": {
+      "id_transaccion": "TX-1001",
+      "estado": "APROBADO",
+      "codigo": "OK_201"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

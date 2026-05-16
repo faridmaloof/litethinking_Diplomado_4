@@ -1,0 +1,10 @@
+{
+  "usuario": "qa_master",
+  "edad": 35,
+  "activo": true,
+  "roles": ["admin", "tester"],
+  "direccion": {
+    "ciudad": "Palmira",
+    "cp": "763533"
+  }
+}

@@ -1,0 +1,9 @@
+services:
+  wiremock:
+    image: wiremock/wiremock:latest
+    container_name: wiremock-dia2
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./mappings:/home/wiremock/mappings
+    command: ["--verbose"]
