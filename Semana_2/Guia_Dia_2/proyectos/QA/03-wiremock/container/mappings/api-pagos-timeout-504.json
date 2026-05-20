@@ -1,0 +1,17 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/api/pagos"
+  },
+  "response": {
+    "status": 504,
+    "jsonBody": {
+      "error": "Gateway Timeout - Banco Caído",
+      "codigo": "ERR_504"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "fixedDelayMilliseconds": 10000
+  }
+}

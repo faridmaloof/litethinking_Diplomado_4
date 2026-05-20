@@ -5,14 +5,15 @@
     "url": "/api/pagos/aprobado"
   },
   "response": {
-    "status": 201,
+    "status": 400,
     "jsonBody": {
       "id_transaccion": "TX-1001",
       "estado": "APROBADO",
-      "codigo": "OK_201"
+      "codigo": "OK_205"
     },
     "headers": {
       "Content-Type": "application/json"
-    }
+    },
+    "fixedDelayMilliseconds": 45000
   }
 }

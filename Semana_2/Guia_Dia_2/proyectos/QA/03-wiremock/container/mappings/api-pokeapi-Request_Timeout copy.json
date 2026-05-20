@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/v2/pokemon/pikachu_01"
+  },
+  "response": {
+    "status": 408,
+    "jsonBody": {
+      "id": "25",
+      "name": "pikachu",
+      "order": "35",
+      "error": "Request Timeout - Banco Caído",
+      "codigo": "ERR_408"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
