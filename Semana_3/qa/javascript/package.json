@@ -1,0 +1,11 @@
+{
+  "name": "qa-javascript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-api.mjs",
+    "profile": "node scripts/profile-cache.mjs",
+    "audit": "node scripts/audit-frontend.mjs"
+  }
+}

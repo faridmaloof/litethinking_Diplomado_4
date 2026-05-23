@@ -1,0 +1,15 @@
+{
+  "name": "qa-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "tsx src/validate-api.ts",
+    "profile": "tsx src/profile-cache.ts",
+    "audit": "tsx src/audit-frontend.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

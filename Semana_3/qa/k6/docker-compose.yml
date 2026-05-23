@@ -1,0 +1,10 @@
+services:
+  qa-k6:
+    image: grafana/k6:latest
+    command: ["run", "/scripts/performance.js"]
+    environment:
+      BASE_URL: http://host.docker.internal:8000
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - ./performance.js:/scripts/performance.js:ro

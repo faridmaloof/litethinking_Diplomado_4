@@ -1,0 +1,16 @@
+.venv/
+qa/.venv/
+qa/__pycache__/
+qa/.pytest_cache/
+qa/.mypy_cache/
+src/frontend/node_modules/
+src/frontend/dist/
+src/frontend/.vite/
+src/frontend/.cache/
+src/backend/__pycache__/
+src/backend/.venv/
+qa/javascript/node_modules/
+qa/typescript/node_modules/
+qa/**/bin/
+qa/**/obj/
+qa/**/target/
