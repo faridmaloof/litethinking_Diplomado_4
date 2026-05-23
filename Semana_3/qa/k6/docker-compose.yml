@@ -1,10 +1,13 @@
 services:
   qa-k6:
     image: grafana/k6:latest
-    command: ["run", "/scripts/performance.js"]
+    command: ["run", "/scripts/performance_nocache.js"]
     environment:
       BASE_URL: http://host.docker.internal:8000
+      K6_WEB_DASHBOARD: "true"
+      K6_WEB_DASHBOARD_EXPORT: /reports/html-report.html
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     volumes:
-      - ./performance.js:/scripts/performance.js:ro
+      - ./performance_nocache.js:/scripts/performance_nocache.js:ro
+      - ./reports:/reports
