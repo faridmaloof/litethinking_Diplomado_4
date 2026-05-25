@@ -14,7 +14,7 @@ export function AccessibilitySection({ data }: AccessibilitySectionProps) {
         </div>
       </div>
 
-      <form className="demo-form" aria-label="Formulario accesible de prueba">
+      <form className="demo-form" aria-label="Formulario accesible de prueba" onSubmit={(event) => event.preventDefault()}>
         <label>
           Nombre completo
           <input type="text" placeholder="Ana Perez" />
@@ -33,14 +33,14 @@ export function AccessibilitySection({ data }: AccessibilitySectionProps) {
       <div className="list-box">
         <h3>Se puede validar con teclado</h3>
         <ul>
-          {data?.accessibility.testing.map((item) => <li key={item}>{item}</li>)}
+          {data?.accessibility.testing?.map((item) => <li key={item}>{item}</li>)}
         </ul>
       </div>
 
       <div className="list-box accent">
         <h3>Señales incluidas</h3>
         <ul>
-          {data?.accessibility.signals.map((item) => <li key={item}>{item}</li>)}
+          {data?.accessibility.signals?.map((item) => <li key={item}>{item}</li>)}
         </ul>
       </div>
     </article>

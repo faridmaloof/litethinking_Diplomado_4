@@ -34,7 +34,7 @@ export function SeoSection({ data }: SeoSectionProps) {
       </dl>
 
       <div className="keyword-row" aria-label="Palabras clave SEO">
-        {data?.seo.keywords.map((keyword) => (
+        {data?.seo.keywords?.map((keyword) => (
           <span key={keyword} className="pill subtle-pill">
             {keyword}
           </span>

@@ -33,7 +33,7 @@ export function useLabData(mode: Mode, locale: Locale): UseLabDataResult {
         const payload = (await response.json()) as LabState
         setData(payload)
         setStatusMessage(
-          payload.performance.cacheHit
+          payload.cache.hit
             ? 'Cache activa. La ruta rapida esta disponible.'
             : 'Sin cache. El laboratorio esta midiendo la ruta lenta.',
         )

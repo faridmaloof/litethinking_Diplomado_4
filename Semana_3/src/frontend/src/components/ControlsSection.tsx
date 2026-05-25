@@ -18,7 +18,7 @@ export function ControlsSection({ mode, locale, onModeChange, onLocaleChange }: 
         </div>
       </div>
 
-      <div className="toggle-row" role="tablist" aria-label="Modo de rendimiento">
+      <div className="toggle-row" role="group" aria-label="Modo de rendimiento">
         <button
           type="button"
           className={mode === 'cached' ? 'toggle active' : 'toggle'}

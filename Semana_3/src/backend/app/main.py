@@ -7,14 +7,15 @@ from .config import AppConfig
 from .lab_service import AppMode, LabService, Locale
 
 app = FastAPI(title='PulseLab API', version='1.0.0')
+config = AppConfig()
 # Instancia unica del servicio de dominio para conservar el cache
 # en memoria durante la vida del proceso.
-service = LabService(AppConfig())
+service = LabService(config)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['*'],
-    allow_methods=['*'],
+    allow_origins=[config.app_origin],
+    allow_methods=['GET'],
     allow_headers=['*'],
 )
 
