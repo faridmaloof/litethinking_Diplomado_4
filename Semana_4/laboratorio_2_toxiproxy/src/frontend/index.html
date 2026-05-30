@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia Store | Laboratorio 2</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Semana 4 · Laboratorio 2</p>
+        <h1>Academia Store</h1>
+        <p class="lead">
+          Una tienda demo realista para practicar resiliencia de red y degradacion
+          controlada con Toxiproxy.
+        </p>
+        <div class="hero-grid">
+          <article class="hero-card">
+            <span>Frontend</span>
+            <strong>Panel operativo de prueba</strong>
+          </article>
+          <article class="hero-card">
+            <span>Backend</span>
+            <strong>FastAPI con API estable</strong>
+          </article>
+          <article class="hero-card">
+            <span>QA</span>
+            <strong>Proxy de latencia y toxic</strong>
+          </article>
+        </div>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel">
+          <div class="panel-title">
+            <h2>Estado del sistema</h2>
+            <span id="health-pill" class="pill">Cargando...</span>
+          </div>
+          <div id="summary-grid" class="stats-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>Catalogo</h2>
+            <span>Datos para probar degradacion</span>
+          </div>
+          <div id="catalog-grid" class="card-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>Login de prueba</h2>
+            <span>Credenciales controladas</span>
+          </div>
+          <form id="login-form" class="login-form">
+            <label>
+              Correo
+              <input name="email" type="email" value="student@demo.local" />
+            </label>
+            <label>
+              Contrasena
+              <input name="password" type="password" value="DevSecOps123" />
+            </label>
+            <button type="submit">Entrar</button>
+          </form>
+          <pre id="login-result" class="result-box">Esperando accion...</pre>
+        </section>
+
+        <section class="panel panel-wide">
+          <div class="panel-title">
+            <h2>Pedidos recientes</h2>
+            <span>El flujo deberia seguir vivo aun con red degradada</span>
+          </div>
+          <div id="orders-table" class="orders-table"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

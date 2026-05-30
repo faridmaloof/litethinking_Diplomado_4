@@ -1,0 +1,11 @@
+services:
+  zap:
+    image: ghcr.io/zaproxy/zaproxy:stable
+    command:
+      - zap-baseline.py
+      - -t
+      - http://host.docker.internal:4173
+      - -r
+      - zap-report.html
+    volumes:
+      - ./reports:/zap/wrk

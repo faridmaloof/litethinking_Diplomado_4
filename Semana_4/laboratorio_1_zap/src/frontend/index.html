@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia Store | Laboratorio 1</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Semana 4 · Laboratorio 1</p>
+        <h1>Academia Store</h1>
+        <p class="lead">
+          Una tienda demo realista para practicar DAST con OWASP ZAP sobre una
+          aplicacion viva y funcional.
+        </p>
+        <div class="hero-grid">
+          <article class="hero-card">
+            <span>Frontend</span>
+            <strong>React-free UI con Nginx</strong>
+          </article>
+          <article class="hero-card">
+            <span>Backend</span>
+            <strong>FastAPI con datos demo</strong>
+          </article>
+          <article class="hero-card">
+            <span>QA</span>
+            <strong>ZAP baseline scan</strong>
+          </article>
+        </div>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel">
+          <div class="panel-title">
+            <h2>Estado del sistema</h2>
+            <span id="health-pill" class="pill">Cargando...</span>
+          </div>
+          <div id="summary-grid" class="stats-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>Catalogo</h2>
+            <span>Datos reales para demo</span>
+          </div>
+          <div id="catalog-grid" class="card-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>Login de prueba</h2>
+            <span>Credenciales controladas</span>
+          </div>
+          <form id="login-form" class="login-form">
+            <label>
+              Correo
+              <input name="email" type="email" value="student@demo.local" />
+            </label>
+            <label>
+              Contrasena
+              <input name="password" type="password" value="DevSecOps123" />
+            </label>
+            <button type="submit">Entrar</button>
+          </form>
+          <pre id="login-result" class="result-box">Esperando accion...</pre>
+        </section>
+
+        <section class="panel panel-wide">
+          <div class="panel-title">
+            <h2>Pedidos recientes</h2>
+            <span>Panel operativo para el laboratorio</span>
+          </div>
+          <div id="orders-table" class="orders-table"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

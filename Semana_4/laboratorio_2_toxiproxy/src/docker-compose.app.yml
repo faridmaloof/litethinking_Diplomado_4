@@ -1,0 +1,16 @@
+name: week4-lab2-toxiproxy
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - '8000:8000'
+
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - '4173:80'
