@@ -34,6 +34,15 @@ def health() -> dict[str, object]:
         'components': ['frontend', 'backend'],
     }
 
+@app.get('/api/healths')
+def healths() -> dict[str, object]:
+    return {
+        'status': 'UP',
+        'lab': 'lab-3-sonarqube',
+        'timestamp': datetime.now(timezone.utc).isoformat(),
+        'components': ['frontend', 'backend'],
+    }
+
 
 @app.get('/api/catalog')
 def catalog() -> dict[str, object]:

@@ -33,7 +33,7 @@ cd qa/sonarqube
 $env:SONAR_TOKEN = '<tu-token>'
 .\run-scan.ps1
 ```
-
+sqa_7c6946c4e6c8aa21fd7aa636659bdbcba0298368
 Tambien puedes pasar el token directamente:
 
 ```powershell

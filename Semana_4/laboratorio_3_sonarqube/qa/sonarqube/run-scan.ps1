@@ -16,5 +16,5 @@ docker run --rm `
   -e SONAR_TOKEN=$SonarToken `
     -v "$($projectRootPath):/usr/src/project" `
     -v "$($qaRootPath)/sonar-project.properties:/usr/src/project/sonar-project.properties" `
-  sonarsource/sonar-scanner-cli:latest `
-  sonar-scanner -Dproject.settings=/usr/src/project/sonar-project.properties
+  -w /usr/src/project `
+  sonarsource/sonar-scanner-cli:latest
