@@ -1,0 +1,13 @@
+# ZAP Default Scan Policy
+# This is a basic policy for security scanning
+
+# Enable common scanners
+alert.high=1
+alert.medium=1
+alert.low=1
+alert.informational=1
+
+# Set scan strength
+scanner.high.strength=MEDIUM
+scanner.medium.strength=MEDIUM
+scanner.low.strength.MEDIUM

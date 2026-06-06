@@ -1,0 +1,27 @@
+{
+  "quality_gate": {
+    "name": "Default QA Gate",
+    "conditions": [
+      {
+        "metric": "bugs",
+        "operator": "LT",
+        "threshold": "10"
+      },
+      {
+        "metric": "vulnerabilities",
+        "operator": "LT",
+        "threshold": "5"
+      },
+      {
+        "metric": "code_smells",
+        "operator": "LT",
+        "threshold": "50"
+      },
+      {
+        "metric": "coverage",
+        "operator": "GT",
+        "threshold": "80"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "example_proxy",
+  "listen": "[::1]:8475",
+  "upstream": "httpbin.org:80",
+  "enabled": true
+}

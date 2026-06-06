@@ -1,0 +1,71 @@
+{
+  "modificar_headers_request": {
+    "Ruta": "/api/users",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "RequestHeader",
+    "Tipo_modificacion": "parcial",
+    "Headers": {
+      "X-Custom-Header": "ValorPersonalizado",
+      "X-Request-ID": "<UUID>",
+      "Authorization": "Bearer <TextoAleatorio 32>"
+    }
+  },
+  "modificar_body_request": {
+    "Ruta": "/api/users",
+    "Metodo": "POST",
+    "Tipo_intercepcion": "RequestBody",
+    "Tipo_modificacion": "parcial",
+    "Body": {
+      "timestamp": "<FechaActual '%Y-%m-%d %H:%M:%S'>",
+      "source": "testing_proxy"
+    }
+  },
+  "modificar_headers_response": {
+    "Ruta": "/api/users",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "ResponseHeader",
+    "Tipo_modificacion": "parcial",
+    "Headers": {
+      "X-Modified-By": "QA-Testing-Proxy",
+      "X-Response-Time": "<TextoAleatorio 10>"
+    }
+  },
+  "modificar_body_response": {
+    "Ruta": "/api/users",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "ResponseBody",
+    "Tipo_modificacion": "parcial",
+    "Body": {
+      "proxy_metadata": {
+        "processed_by": "QA-Engineering-Proxy",
+        "processing_time": "<FechaActual '%Y-%m-%d %H:%M:%S'>"
+      }
+    }
+  },
+  "respuesta_personalizada": {
+    "Ruta": "/api/status",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "Response",
+    "Tipo_modificacion": "completo",
+    "Datos": {
+      "status": "healthy",
+      "service": "API-Gateway",
+      "version": "1.0.0",
+      "timestamp": "<FechaActual '%Y-%m-%d %H:%M:%S'>",
+      "random_id": "<UUID>",
+      "test_value": "<Aleatorio [\"success\", \"pending\", \"failed\"]>"
+    }
+  },
+  "inyectar_error": {
+    "Ruta": "/api/error",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "Response",
+    "Tipo_modificacion": "completo",
+    "Datos": {
+      "code": 500,
+      "error": "Internal Server Error",
+      "message": "Simulated error for testing purposes",
+      "error_id": "<UUID>"
+    }
+  }
+}

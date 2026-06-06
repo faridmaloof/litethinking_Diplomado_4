@@ -1,0 +1,62 @@
+{
+  "test_get_request": {
+    "Ruta": "/test/get",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "Response",
+    "Tipo_modificacion": "completo",
+    "Datos": {
+      "message": "GET request intercepted successfully!",
+      "timestamp": "<FechaActual '%Y-%m-%d %H:%M:%S'>",
+      "request_id": "<UUID>",
+      "status": "success"
+    }
+  },
+  "test_post_request": {
+    "Ruta": "/test/post",
+    "Metodo": "POST",
+    "Tipo_intercepcion": "Response",
+    "Tipo_modificacion": "completo",
+    "Datos": {
+      "message": "POST request intercepted and modified!",
+      "original_data_received": "will be added from request",
+      "timestamp": "<FechaActual '%Y-%m-%d %H:%M:%S'>",
+      "request_id": "<UUID>",
+      "status": "success"
+    }
+  },
+  "add_custom_header": {
+    "Ruta": "/test/header",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "ResponseHeader",
+    "Tipo_modificacion": "parcial",
+    "Headers": {
+      "X-Proxy-Intercepted": "true",
+      "X-Request-ID": "<UUID>",
+      "X-Timestamp": "<FechaActual '%Y%m%d_%H%M%S'>"
+    }
+  },
+  "simulate_error_404": {
+    "Ruta": "/test/error404",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "Response",
+    "Tipo_modificacion": "completo",
+    "Datos": {
+      "error": "Resource not found",
+      "code": 404,
+      "message": "The requested resource was not found",
+      "error_id": "<UUID>"
+    }
+  },
+  "simulate_error_500": {
+    "Ruta": "/test/error500",
+    "Metodo": "GET",
+    "Tipo_intercepcion": "Response",
+    "Tipo_modificacion": "completo",
+    "Datos": {
+      "error": "Internal server error",
+      "code": 500,
+      "message": "An internal error occurred during processing",
+      "error_id": "<UUID>"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "Api_B_Payment_Delay": {
+    "Tipo_intercepcion": "Request",
+    "Ruta": "/api/payment",
+    "Metodo": "POST",
+    "Descripcion": "Simula retraso en procesamiento de pago",
+    "Tipo_modificacion": "Parcial",
+    "Datos": {
+      "processing_delay": "<Delay(2000)>",
+      "note": "Payment processing delayed for testing purposes"
+    }
+  },
+  "Api_B_Error_Simulation": {
+    "Tipo_intercepcion": "Response",
+    "Ruta": "/api/external-service",
+    "Metodo": "GET",
+    "Descripcion": "Simula error en servicio externo",
+    "Tipo_modificacion": "Completo",
+    "Datos": {
+      "error": true,
+      "message": "External service temporarily unavailable",
+      "code": "<Error(503)>",
+      "retry_after": "<Aleatorio(30, 120)>",
+      "correlation_id": "<UUID()>"
+    }
+  }
+}

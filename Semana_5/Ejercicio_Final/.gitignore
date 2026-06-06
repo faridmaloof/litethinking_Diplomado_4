@@ -1,0 +1,21 @@
+# Archivos de entorno
+.env
+.secrets.json
+
+# Certificados generados
+proxy/certs/*
+
+# Temporales
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Dependencias
+node_modules/
+__pycache__/
+*.pyc
+
+# Secretos
+secrets/*
+!secrets/.gitkeep

@@ -1,0 +1,26 @@
+{
+  "Api_A_Request": {
+    "Tipo_intercepcion": "Request",
+    "Ruta": "/api/users",
+    "Metodo": "POST",
+    "Descripcion": "Intercepta POST a /api/users y modifica el payload",
+    "Tipo_modificacion": "Completo",
+    "Datos": {
+      "id": "<UUID()>",
+      "name": "<Aleatorio(['Alice', 'Bob', 'Charlie', 'Diana'])>",
+      "email": "<TextoAleatorio(5)>@example.com",
+      "created_at": "<FechaActual('%Y-%m-%d %H:%M:%S')>",
+      "processed_by": "mitmproxy_rule_engine"
+    }
+  },
+  "Api_A_Response": {
+    "Tipo_intercepcion": "Response",
+    "Ruta": "/api/users",
+    "Metodo": "GET",
+    "Tipo_modificacion": "Parcial",
+    "Datos": {
+      "source": "intercepted_by_proxy",
+      "timestamp": "<FechaActual('%Y-%m-%d %H:%M:%S')>"
+    }
+  }
+}

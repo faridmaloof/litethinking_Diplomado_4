@@ -1,0 +1,42 @@
+services:
+  proxy:
+    container_name: qa-proxy
+    build: ./proxy
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    environment:
+      MITMPROXY_WEB_UI: "8081"
+    volumes:
+      - rules_volume:/home/mitmproxy/config/rules
+    networks:
+      - qa-lab-network
+    depends_on:
+      - toxiproxy
+
+  toxiproxy:
+    container_name: qa-toxiproxy
+    build: ./chaos/toxiproxy
+    restart: unless-stopped
+    ports:
+      - "8474:8474"
+      - "8475:8475"
+    networks:
+      - qa-lab-network
+
+  zap:
+    container_name: qa-zap
+    build: ./security/zap
+    restart: unless-stopped
+    ports:
+      - "8090:8090"
+    networks:
+      - qa-lab-network
+
+networks:
+  qa-lab-network:
+    driver: bridge
+
+volumes:
+  rules_volume:
